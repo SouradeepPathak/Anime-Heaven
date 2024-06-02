@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    border:0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width:100%;
+}
+.container{
+    width:80%;
+    margin:auto;
+    padding:2rem 2rem;
+    /* background-color: blue; */
+}
+a{
+    text-decoration: none;
+}
+.header{
+    margin-bottom: 2.8rem;
+    text-align: center;
+}
+#webheading{
+    margin-bottom: 1.2rem;
+    color:rgb(67, 5, 97)
+}
+.header p{
+    color:rgb(70, 65, 65);
+}
+.maincardcontainer{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width:1200px){
+    .maincardcontainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width:1050px){
+    .maincardcontainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width:650px){
+    .maincardcontainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.card_1_container{
+    border: 1px solid rgb(229, 224, 224);
+    display:flex;
+    flex-direction: column;
+    border-radius:8px;
+    overflow:hidden;
+}
+.imgcontainer{
+    position:relative;
+    overflow: hidden;
+    height:10rem;
+    /* margin-bottom: 1rem; */
+}
+.card1img{
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width:100%;
+    border-top-left-radius: 1%;
+    border-top-right-radius: 1%;
+}
+.card_1_container:hover .card1img{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+.card_heading{
+    /* margin-bottom: 1rem; */
+    display: flex;
+    flex-direction: column;
+    padding:1.5rem;
+    text-align: center;
+}
+.card_headingtitle{
+    margin-bottom:2rem;
+}
+.card_heading p{
+    color:rgb(89, 76, 76);
+}
+.card_heading:hover a{
+    color:rgb(30, 3, 55)
+}
+.card_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem;
+}
+.author{
+    display:flex;
+    align-items: center;
+    gap:0.5rem;
+}
+.avatar_img{
+    height:2.5rem;
+    width:2.5rem;
+    border:1px solid rgb(217, 204, 204);
+    border-radius: 50%;
+    background-color: lightgrey;
+}
+.author_det{
+    display:flex;
+    flex-direction:column;
+    
+}
+#auth_name{
+    color:rgb(62, 62, 200);
+    font-weight: 600;
+}
+#rel_date{
+    color:rgb(118, 107, 107)
+}
+.genre{
+    color:grey;
+    border:1px solid grey;
+    padding:0.3rem 0.5rem;
+    border-radius:10%;
+}
